@@ -9,6 +9,8 @@ public class FVCalc {
         double futureValue = currentValue * Math.pow(1 + rate / 100.0, n);
 
         // הדפסת התוצאה בפורמט הנדרש עם סימן דולר ועם %25 עבור סימן אחוז
-        System.out.println("After " + n + " years, a $" + currentValue + " saved at " + rate + "%25 will yield $" + (int) futureValue);
-    }
+        System.out.println("After " + n + " years, $" + currentValue + " saved at " + rate + "% will yield $" + (int) futureValue);
+    
+	
+}
 }
