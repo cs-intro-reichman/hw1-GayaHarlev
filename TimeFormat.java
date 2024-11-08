@@ -12,6 +12,32 @@ public class TimeFormat {
 		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
-        // Replace this comment with the rest of your code
-	}
+         
+		
+        // אם השעה היא בבוקר (AM)
+        if (hours < 12) {
+            if (minutes < 10) {
+                System.out.println(hours + ":0" + minutes + " AM");
+            } else {
+                System.out.println(hours + ":" + minutes + " AM");
+            }
+        } 
+        // אם השעה היא אחרי הצהריים (PM)
+        else {
+            int displayHour = hours;
+            if (hours > 12) {
+                displayHour = hours - 12; // ממירים את השעה לפורמט 12 שעות
+            }
+            // אם השעה היא 00:00 (חצות) צריכים להדפיס 12:00 AM
+            if (hours == 0) {
+                displayHour = 12; // חצות
+            }
+
+            if (minutes < 10) {
+                System.out.println(displayHour + ":0" + minutes + " PM");
+            } else {
+                System.out.println(displayHour + ":" + minutes + " PM");
+            }
+        }
+    }
 }
