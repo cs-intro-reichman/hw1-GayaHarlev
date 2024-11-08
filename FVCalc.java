@@ -8,7 +8,7 @@ public class FVCalc {
         // חישוב ערך עתידי (future value)
         double futureValue = currentValue * Math.pow(1 + rate / 100.0, n);
 
-        // הדפסת התוצאה בפורמט הנדרש
-        System.out.println("After " + n + " years, $" + currentValue + " saved at " + rate + "% will yield " + (int) futureValue);
+        // הדפסת התוצאה בפורמט הנדרש עם "a" לפני הסכום
+        System.out.println("After " + n + " years, a $" + currentValue + " saved at " + rate + "% will yield " + (int) futureValue);
     }
 }
